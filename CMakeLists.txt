@@ -32,3 +32,6 @@ target_link_libraries(check
 )
 
 add_test(NAME check COMMAND check)
+
+install(TARGETS strategy DESTINATION bin)
+include(CPackConfig.cmake)
