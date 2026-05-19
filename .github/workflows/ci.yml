@@ -38,7 +38,7 @@ jobs:
           cd build
           cpack -G DEB
       - name: Release
-        if: startsWith(github.ref, 'resf/tags')
+        if: startsWith(github.ref, 'refs/tags')
         uses: softprops/action-gh-release@v2
         with:
-          files: build/*.deg
+          files: build/*.deb
